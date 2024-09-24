@@ -1,0 +1,100 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #00008B, #4B0082);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Chat container styling */
+.chat-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 800px; /* Increased width */
+    height: 80vh; /* Adjusted height to take more vertical space */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+.chat-header {
+    background-color: darkblue; /* Remove background color */
+    padding: 0; /* Remove padding */
+    text-align: center;
+}
+
+.chat-header .logo {
+    width: 100px;
+    height: 100px; /* Set height equal to width */
+    border-radius: 50%; /* Make the frame circular */
+    margin-bottom: 10px;
+    overflow: hidden; /* Ensures the logo fits inside the circular frame */
+}
+
+/* Prompt examples styling */
+.prompt-examples {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.prompt-examples p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.prompt-examples ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.prompt-examples li {
+    margin: 5px 0;
+    cursor: pointer;
+    color: #3498db;
+}
+
+.prompt-examples li:hover {
+    text-decoration: underline;
+}
+
+/* Chat window styling */
+.chat-window {
+    flex: 1; /* Allows the chat window to expand to fill available space */
+    overflow-y: auto;
+    padding: 40px;
+    background: linear-gradient(to bottom, #00008B, #4B0082);
+}
+
+/* Chat input area */
+.chat-input {
+    display: flex;
+    border-top: 1px solid #34495e;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: #333;
+}
+
+.chat-input button {
+    padding: 10px;
+    background-color: #2980b9;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #3498db;
+}

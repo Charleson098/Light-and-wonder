@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light and Wonder Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="Logo.webp" alt="Light and Wonder Logo" class="logo"> <!-- Updated logo -->
+            <h2>Light and Wonder Assistant</h2>
+            <p>Your friendly support assistant, here to help solve common issues.</p>
+        </div>
+        
+        <div class="chat-window" id="chat-window">
+            <!-- Prompt examples that are now clickable -->
+            <div class="prompt-examples">
+                <p>Example Prompts:</p>
+                <ul>
+                    <li class="prompt" data-query="How do I solve power outages in the casino?">How do I solve power outages in the casino?</li>
+                    <li class="prompt" data-query="What should I do if a user cannot log in to the UI?">What should I do if a user cannot log in to the UI?</li>
+                    <li class="prompt" data-query="How can I fix application crashes on startup?">How can I fix application crashes on startup?</li>
+                    <li class="prompt" data-query="What steps can I take if I cannot run reports?">What steps can I take if I cannot run reports?</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your query here...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
