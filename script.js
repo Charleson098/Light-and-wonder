@@ -41,7 +41,7 @@ async function sendMessage() {
                 'Authorization': `Bearer ${apiKey}`
             },
             body: JSON.stringify({
-                model: "gpt-3.5-turbo",
+                model: "ft:gpt-3.5-turbo-0125:personal::ABj45wkZ",
                 messages: [{ role: "user", content: userInput.value }],
                 max_tokens: 50, // Set a low token limit to conserve free tier usage
                 n: 1,            // Request only one response
