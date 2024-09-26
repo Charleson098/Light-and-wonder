@@ -46,7 +46,7 @@ async function sendMessage() {
                 max_tokens: 50, // Set a low token limit to conserve free tier usage
                 n: 1,            // Request only one response
                 stop: null,      // No stop sequences specified
-                temperature: 0.7 // Control randomness; lower values make responses more focused
+                temperature: 0 // Control randomness; lower values make responses more focused
             })
         });
 
