@@ -178,22 +178,28 @@ async function submitNewTicket(issueDescription) {
 }
 
 // Mock function to get a new ticket number (should be replaced by Python logic)
-async function getNewTicketNumber() {
-    const randomTicketNumber = `1-${Math.floor(1000000000 + Math.random() * 9000000000)}`; // 10-digit ticket number
-    return randomTicketNumber;
-}
+//async function getNewTicketNumber() {
+    //const randomTicketNumber = `1-${Math.floor(1000000000 + Math.random() * 9000000000)}`; // 10-digit ticket number
+    //return randomTicketNumber;
+//}
 
-// Function to clear resolution prompt, description input, and submit button
 function clearForm() {
     const chatWindow = document.getElementById('chat-window');
 
-    // Remove resolution prompt, description input, and submit button if they exist
-    const resolutionPrompt = chatWindow.querySelector('div:contains("Did this resolve your issue?")');
-    if (resolutionPrompt) resolutionPrompt.remove();
+    // Remove the resolution prompt by checking for text content
+    const resolutionDivs = chatWindow.getElementsByTagName('div');
+    for (let div of resolutionDivs) {
+        if (div.textContent.includes("Did this resolve your issue?")) {
+            div.remove();
+            break;
+        }
+    }
 
+    // Remove description input
     const descriptionInput = chatWindow.querySelector('#description-input');
     if (descriptionInput) descriptionInput.remove();
 
+    // Remove submit button
     const submitButton = chatWindow.querySelector('#submit-description');
     if (submitButton) submitButton.remove();
 }
