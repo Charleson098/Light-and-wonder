@@ -178,10 +178,10 @@ async function submitNewTicket(issueDescription) {
 }
 
 // Mock function to get a new ticket number (should be replaced by Python logic)
-//async function getNewTicketNumber() {
-    //const randomTicketNumber = `1-${Math.floor(1000000000 + Math.random() * 9000000000)}`; // 10-digit ticket number
-    //return randomTicketNumber;
-//}
+async function getNewTicketNumber() {
+    const randomTicketNumber = `1-${Math.floor(1000000000 + Math.random() * 9000000000)}`; // 10-digit ticket number
+    return randomTicketNumber;
+}
 
 function clearForm() {
     const chatWindow = document.getElementById('chat-window');
