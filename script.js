@@ -38,7 +38,8 @@ async function sendMessage() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${apiKey}`
+                'Authorization': `Bearer ${apiKey}`,
+                'OpenAI-Organization':'org-PfxMh735Tj1fsXqxdZoTTXQ6'
             },
             body: JSON.stringify({
                 model: "ft:gpt-3.5-turbo-0125:personal::ABj45wkZ",
