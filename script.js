@@ -1,4 +1,4 @@
-const apiKey = 'sk-7T8kolOqREEWDfYsI4hxjKDqmK1C5qZrBUIdlyRqTxT3BlbkFJbUaod7VY8x8XTx-Ke8-fLxd1Rua3_3sfpFlUevY_IA'; // Replace with your actual API key
+const apiKey = 'sk-svcacct-CMaeBCQHRQFZEPpkosPPuI34_R2rtgG1L6nuqsy_klx4a0iqrAg7vgo3y-5MxRLWfrAGZ1ADSOxT3BlbkFJRtJfiteqlUFWoLLVxyZEftL3RKGrYn5k7sHLf5GUFiDZC-CgyjbGO8TIBL7gQ3l5rzu2Cej0engA'; // Replace with your actual API key
 
 // Add event listeners to prompts
 document.querySelectorAll('.prompt').forEach(item => {
