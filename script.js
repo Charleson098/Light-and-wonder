@@ -149,21 +149,21 @@ function handleNoClick() {
 
 // Function to submit a new ticket and add a row to the Excel file (Python)
 async function submitNewTicket(issueDescription) {
-    const ticketNumber = await getNewTicketNumber(); // Get a new ticket number (via Python or API)
-
-    // Append new ticket information to the Excel file using Python
+    // Send a request to the Python backend to create a new ticket
     const response = await fetch('https://397b-34-168-216-58.ngrok-free.app/add_ticket', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            ticketNumber: ticketNumber,
             issueDescription: issueDescription
         })
     });
 
     if (response.ok) {
+        const data = await response.json();
+        const ticketNumber = data.ticketNumber;  // Extract the actual ticket number from the response
+
         // Inform the user that the ticket has been created
         const chatWindow = document.getElementById('chat-window');
         const ticketMessage = document.createElement('div');
@@ -171,16 +171,11 @@ async function submitNewTicket(issueDescription) {
         ticketMessage.style.color = '#2ecc71';
         chatWindow.appendChild(ticketMessage);
         chatWindow.scrollTop = chatWindow.scrollHeight; // Scroll to bottom
+
         clearForm(); // Clear the form after ticket creation
     } else {
         console.error('Error creating ticket.');
     }
-}
-
-// Mock function to get a new ticket number (should be replaced by Python logic)
-async function getNewTicketNumber() {
-    const randomTicketNumber = `1-${Math.floor(1000000000 + Math.random() * 9000000000)}`; // 10-digit ticket number
-    return randomTicketNumber;
 }
 
 function clearForm() {
