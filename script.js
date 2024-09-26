@@ -149,7 +149,7 @@ async function submitNewTicket(issueDescription) {
     const ticketNumber = await getNewTicketNumber(); // Get a new ticket number (via Python or API)
 
     // Append new ticket information to the Excel file using Python
-    const response = await fetch('https://d4f4-34-168-216-58.ngrok-free.app/add_ticket', {
+    const response = await fetch('https://397b-34-168-216-58.ngrok-free.app/add_ticket', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
